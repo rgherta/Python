@@ -9,7 +9,7 @@ import math
 
 #reading data and splitting into training/test
 csv = pandas.read_csv('housingsales.csv')
-train, test = sklearn.cross_validation.train_test_split(csv, train_size = 0.8)
+train, test = sklearn.cross_validation.train_test_split(csv, train_size = 0.8, random_state=0)
 
 #Plotting all data
 matplotlib.pyplot.plot(train['sqft_living'], train['price'],".", test['sqft_living'], test['price'], 'o')
