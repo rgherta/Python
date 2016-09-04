@@ -22,7 +22,7 @@ print "Mean Square Error ", numpy.mean((lr.predict(test['sqft_living'].reshape(-
 print "RMSE ", math.sqrt(numpy.mean((lr.predict(test['sqft_living'].reshape(-1,1)) - test['price'].reshape(-1,1))**2))
 print "Variance score ", lr.score(test['sqft_living'].reshape(-1,1), test['price'].reshape(-1,1))
 
-#plot predicted test
+#Plot predicted test
 matplotlib.pyplot.plot(test['sqft_living'].reshape(-1,1), test['price'].reshape(-1,1),".",
                        test['sqft_living'].reshape(-1,1), lr.predict(test['sqft_living'].reshape(-1,1)), '-')
 
